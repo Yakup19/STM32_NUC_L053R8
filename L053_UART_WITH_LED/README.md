@@ -1,1 +1,1 @@
-UART üzerinden gelen ON yada OF mesajı ile yanaıp sönmesinin sağlayan uygulama.
+UART üzerinden gelen ON yada OF mesajı ile ledin yanıp sönmesini sağlayan uygulama.
