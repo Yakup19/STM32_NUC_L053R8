@@ -41,6 +41,7 @@
 /* USER CODE BEGIN PM */
 uint8_t Rx_data[10];
 char Hello[] = "HELLO_WORLD\n";
+uint8_t err_flag=0;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -69,25 +70,24 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   if(Rx_data[1]== 'N')
   {
 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
+	  err_flag=0;
+
   }
   else if(Rx_data[1]== 'F')
   {
 	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+	  err_flag=0;
 
   }
   else{
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	  HAL_Delay(250);
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	  HAL_Delay(250);
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-	  HAL_Delay(250);
-	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  err_flag=1;
 
   }
   memset(Rx_data, '\0',10);
+  HAL_UART_Receive_IT(&huart2, Rx_data, 2);
 
 }
+
 /* USER CODE END 0 */
 
 /**
@@ -129,6 +129,15 @@ int main(void)
   while (1)
   {
 
+	  if(err_flag==1){
+	  	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  	HAL_Delay(300);
+	  	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  	HAL_Delay(300);
+	  	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+	  	HAL_Delay(300);
+	  }
+	  else;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

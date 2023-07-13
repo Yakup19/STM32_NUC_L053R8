@@ -827,3 +827,15 @@ java.io.FileNotFoundException: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Wor
 	at elf_analyzer.ElfAnalyzerView.inputChanged(ElfAnalyzerView.java:265)
 	at elf_analyzer.ElfAnalyzerView.lambda$7(ElfAnalyzerView.java:506)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-13 18:10:03.867
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 1 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-13 18:10:03.868
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-13 18:10:03.868
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 1 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-13 18:10:03.868
+!MESSAGE Existing sessions are:

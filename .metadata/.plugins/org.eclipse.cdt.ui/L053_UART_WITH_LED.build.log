@@ -1,10 +1,10 @@
-14:14:55 **** Incremental Build of configuration Debug for project L053_UART_WITH_LED ****
+18:17:46 **** Incremental Build of configuration Debug for project L053_UART_WITH_LED ****
 make -j8 all 
 arm-none-eabi-size   L053_UART_WITH_LED.elf 
    text	   data	    bss	    dec	    hex	filename
-  14440	     20	   1756	  16216	   3f58	L053_UART_WITH_LED.elf
+  14484	     20	   1756	  16260	   3f84	L053_UART_WITH_LED.elf
 Finished building: default.size.stdout
  
 
-14:14:55 Build Finished. 0 errors, 0 warnings. (took 250ms)
+18:17:46 Build Finished. 0 errors, 0 warnings. (took 267ms)
 
