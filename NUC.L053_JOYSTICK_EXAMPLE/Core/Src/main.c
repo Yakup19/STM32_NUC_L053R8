@@ -19,7 +19,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "dac.h"
 #include "dma.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -99,7 +101,11 @@ int main(void)
   MX_DMA_Init();
   MX_ADC_Init();
   MX_USART2_UART_Init();
+  MX_DAC_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
 
   /* USER CODE END 2 */
 
@@ -111,6 +117,10 @@ int main(void)
 	  sprintf(Sending_Buf,"X degeri: %lu,Y degeri: %lu \n",Jbuff[0], Jbuff[1]);
 	  HAL_UART_Transmit(&huart2, (uint8_t*)Sending_Buf, strlen(Sending_Buf), 1000);
 	  memset(Sending_Buf, '\0', 60);
+	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, Jbuff[0]); // x ekseni degeri
+	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Jbuff[1]);
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
