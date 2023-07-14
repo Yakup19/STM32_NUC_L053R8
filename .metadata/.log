@@ -1164,3 +1164,15 @@ Project's 'NUC.L053_UART_WITH_PWM' active one is 'NUC.L053_UART_WITH_PWM.ioc' fi
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-14 12:35:24.948
 !MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-14 13:51:14.999
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 25 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-14 13:51:15.000
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-14 13:51:15.000
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 25 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-14 13:51:15.000
+!MESSAGE Existing sessions are:
