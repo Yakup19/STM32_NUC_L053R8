@@ -62,7 +62,7 @@ static void MX_TIM2_Init(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	x = (100*Receive_Data[0]);
-
+	i=10+i;
 
   memset(Receive_Data, '\0',10);
   HAL_UART_Receive_IT(&huart2, Receive_Data , 1);
@@ -118,6 +118,8 @@ int main(void)
   {
 	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, x);
 
+	  if(i>=100000)
+		  i=0;
 
 	  //HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, x);
 
