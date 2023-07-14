@@ -1,42 +1,15 @@
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
 #include "main.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
-
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
-
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
 /* USER CODE END PD */
-
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -47,9 +20,9 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-volatile uint32_t x=0;
+
+volatile uint8_t x=0;
 uint8_t Receive_Data[10]={0};
-uint32_t i=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,46 +44,19 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
-int main(void)
-{
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
+ int main(void){
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_DAC_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   HAL_UART_Receive_IT(&huart2, Receive_Data, 1);
-  HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
+
   /* USER CODE END 2 */
+
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -237,11 +183,11 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 15999;
+  htim2.Init.Prescaler = 14;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1500;
+  htim2.Init.Period = 9999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_PWM_Init(&htim2) != HAL_OK)
   {
     Error_Handler();

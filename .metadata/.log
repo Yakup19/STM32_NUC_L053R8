@@ -1287,3 +1287,6 @@ Caused by: org.eclipse.core.runtime.OperationCanceledException
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2405)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
 	... 1 more
+
+!ENTRY org.eclipse.ui 4 4 2023-07-14 14:12:08.603
+!MESSAGE Plug-in 'com.st.stm32cube.ide.mcu.debug.dsf.oss' contributed an invalid Menu Extension (Path: 'org.eclipse.ui.run' is invalid): com.st.stm32cube.ide.mcu.debug.dsf.oss.ui.action.TerminateAndRelaunch
