@@ -1,4 +1,4 @@
-11:31:25 **** Incremental Build of configuration Debug for project NUC.L053_UART_WITH_PWM ****
+12:35:42 **** Incremental Build of configuration Debug for project NUC.L053_UART_WITH_PWM ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'HAL_UART_RxCpltCallback':
@@ -19,15 +19,15 @@ Finished building target: NUC.L053_UART_WITH_PWM.elf
 arm-none-eabi-size   NUC.L053_UART_WITH_PWM.elf 
 arm-none-eabi-objdump -h -S  NUC.L053_UART_WITH_PWM.elf  > "NUC.L053_UART_WITH_PWM.list"
    text	   data	    bss	    dec	    hex	filename
-  16184	     20	   1804	  18008	   4658	NUC.L053_UART_WITH_PWM.elf
+  14428	     20	   1740	  16188	   3f3c	NUC.L053_UART_WITH_PWM.elf
 Finished building: default.size.stdout
  
 Finished building: NUC.L053_UART_WITH_PWM.list
  
-11:31:30 **** Incremental Build of configuration Debug for project NUC.L053_UART_WITH_PWM ****
+12:35:44 **** Incremental Build of configuration Debug for project NUC.L053_UART_WITH_PWM ****
 make -j8 all 
 arm-none-eabi-size   NUC.L053_UART_WITH_PWM.elf 
    text	   data	    bss	    dec	    hex	filename
-  16184	     20	   1804	  18008	   4658	NUC.L053_UART_WITH_PWM.elf
+  14428	     20	   1740	  16188	   3f3c	NUC.L053_UART_WITH_PWM.elf
 Finished building: default.size.stdout
  
