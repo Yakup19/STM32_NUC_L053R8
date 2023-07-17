@@ -52,6 +52,7 @@
 
 /* USER CODE BEGIN PV */
 uint32_t Jbuff[3];
+uint32_t mappeddac;
 char Sending_Buf[60];
 volatile uint8_t buton=0;
 /* USER CODE END PV */
@@ -117,8 +118,18 @@ int main(void)
 	  sprintf(Sending_Buf,"X degeri: %lu,Y degeri: %lu \n",Jbuff[0], Jbuff[1]);
 	  HAL_UART_Transmit(&huart2, (uint8_t*)Sending_Buf, strlen(Sending_Buf), 1000);
 	  memset(Sending_Buf, '\0', 60);
-	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, Jbuff[0]); // x ekseni degeri
-	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Jbuff[1]);
+	  mappeddac=0;
+	  mappeddac = (2200 + (((Jbuff[0]) * (300)) / (4096)));
+	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, Jbuff[0]); // X ekseni degeri
+	  mappeddac=0;
+	  mappeddac = (2200 + (((Jbuff[1]) * (300)) / (4096)));
+	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Jbuff[1]);// Y ekseni değeri
+	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)==GPIO_PIN_RESET){
+		  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 0);// Y ekseni değeri
+		  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0); // X ekseni degeri
+		  HAL_Delay(250);
+
+	  }
 
 
     /* USER CODE END WHILE */

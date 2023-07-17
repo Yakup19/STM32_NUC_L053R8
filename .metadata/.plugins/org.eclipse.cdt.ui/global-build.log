@@ -1,14 +1,7 @@
-18:10:32 **** Incremental Build of configuration Debug for project NUC.L053_JOYSTICK_EXAMPLE ****
+10:28:45 **** Incremental Build of configuration Debug for project NUC.L053_JOYSTICK_EXAMPLE ****
 make -j8 all 
 arm-none-eabi-size   NUC.L053_JOYSTICK_EXAMPLE.elf 
    text	   data	    bss	    dec	    hex	filename
-  21220	    100	   2356	  23676	   5c7c	NUC.L053_JOYSTICK_EXAMPLE.elf
-Finished building: default.size.stdout
- 
-18:10:48 **** Incremental Build of configuration Debug for project NUC.L053_JOYSTICK_EXAMPLE ****
-make -j8 all 
-arm-none-eabi-size   NUC.L053_JOYSTICK_EXAMPLE.elf 
-   text	   data	    bss	    dec	    hex	filename
-  21220	    100	   2356	  23676	   5c7c	NUC.L053_JOYSTICK_EXAMPLE.elf
+  21456	    100	   2364	  23920	   5d70	NUC.L053_JOYSTICK_EXAMPLE.elf
 Finished building: default.size.stdout
  
