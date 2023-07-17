@@ -65,10 +65,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	buton++;
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -104,9 +101,11 @@ int main(void)
   MX_USART2_UART_Init();
   MX_DAC_Init();
   MX_TIM2_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
   HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
+  HAL_TIM_Base_Start(&htim6);
 
   /* USER CODE END 2 */
 
@@ -118,18 +117,16 @@ int main(void)
 	  sprintf(Sending_Buf,"X degeri: %lu,Y degeri: %lu \n",Jbuff[0], Jbuff[1]);
 	  HAL_UART_Transmit(&huart2, (uint8_t*)Sending_Buf, strlen(Sending_Buf), 1000);
 	  memset(Sending_Buf, '\0', 60);
+	  if(buton%2==0){
 	  mappeddac=0;
-	  mappeddac = (2200 + (((Jbuff[0]) * (300)) / (4096)));
-	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, Jbuff[0]); // X ekseni degeri
+	  mappeddac = (50 + (((Jbuff[0]) * (1150)) / (4096)));
+	  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, mappeddac); // X ekseni degeri
 	  mappeddac=0;
 	  mappeddac = (2200 + (((Jbuff[1]) * (300)) / (4096)));
-	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Jbuff[1]);// Y ekseni değeri
-	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)==GPIO_PIN_RESET){
-		  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 0);// Y ekseni değeri
-		  __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0); // X ekseni degeri
-		  HAL_Delay(250);
-
+	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, mappeddac);// Y ekseni değeri
+	  HAL_Delay(50);
 	  }
+
 
 
     /* USER CODE END WHILE */

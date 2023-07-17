@@ -58,7 +58,16 @@
 extern DMA_HandleTypeDef hdma_adc;
 extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
-extern volatile uint8_t buton;
+extern volatile uint32_t buton;
+extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim2;
+extern DAC_HandleTypeDef hdac;
+
+void delay_us (uint16_t us)
+{
+	__HAL_TIM_SET_COUNTER(&htim6,0);  // set the counter value a 0
+	while (__HAL_TIM_GET_COUNTER(&htim6) < us);  // wait for the counter to reach the us input in the parameter
+}
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -150,7 +159,11 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE END EXTI4_15_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(B1_Pin);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
-
+	HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, 0);// Y ekseni değeri
+		__HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0); // X ekseni degeri
+		buton++;
+	  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
+	  delay_us(20);
   /* USER CODE END EXTI4_15_IRQn 1 */
 }
 
