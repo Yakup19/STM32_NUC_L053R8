@@ -1,14 +1,88 @@
-13:24:41 **** Incremental Build of configuration Debug for project NUC.L053_JOYSTICK_EXAMPLE ****
+10:38:33 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/stm32l0xx_it.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32l0xx_it.d" -MT"Core/Src/stm32l0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32l0xx_it.o"
-arm-none-eabi-gcc -o "NUC.L053_JOYSTICK_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_JOYSTICK_EXAMPLE\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_JOYSTICK_EXAMPLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_JOYSTICK_EXAMPLE.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:82:38: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
+   82 |           sprintf (buf, "X Ekseni %.2f ", MPU9250.rawData.ax);
+      |                                   ~~~^    ~~~~~~~~~~~~~~~~~~
+      |                                      |                   |
+      |                                      double              int
+      |                                   %.2d
+../Core/Src/main.c:96:38: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
+   96 |           sprintf (buf, "Y Ekseni %.2f ", MPU9250.rawData.ay);
+      |                                   ~~~^    ~~~~~~~~~~~~~~~~~~
+      |                                      |                   |
+      |                                      double              int
+      |                                   %.2d
+../Core/Src/main.c:111:38: warning: format '%f' expects argument of type 'double', but argument 3 has type 'int' [-Wformat=]
+  111 |           sprintf (buf, "Z Ekseni %.2f\n", MPU9250.rawData.az);
+      |                                   ~~~^     ~~~~~~~~~~~~~~~~~~
+      |                                      |                    |
+      |                                      double               int
+      |                                   %.2d
+arm-none-eabi-gcc -o "NUC.L053_MPU9250_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_MPU9250_EXAMPLE\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_MPU9250_EXAMPLE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUC.L053_MPU9250_EXAMPLE.elf
  
-arm-none-eabi-size   NUC.L053_JOYSTICK_EXAMPLE.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_JOYSTICK_EXAMPLE.elf  > "NUC.L053_JOYSTICK_EXAMPLE.list"
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+arm-none-eabi-objdump -h -S  NUC.L053_MPU9250_EXAMPLE.elf  > "NUC.L053_MPU9250_EXAMPLE.list"
    text	   data	    bss	    dec	    hex	filename
-  21912	    100	   2428	  24440	   5f78	NUC.L053_JOYSTICK_EXAMPLE.elf
+  46600	    476	   3468	  50544	   c570	NUC.L053_MPU9250_EXAMPLE.elf
 Finished building: default.size.stdout
  
-Finished building: NUC.L053_JOYSTICK_EXAMPLE.list
+Finished building: NUC.L053_MPU9250_EXAMPLE.list
+ 
+10:38:44 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46600	    476	   3468	  50544	   c570	NUC.L053_MPU9250_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+10:40:27 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "NUC.L053_MPU9250_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_MPU9250_EXAMPLE\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_MPU9250_EXAMPLE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUC.L053_MPU9250_EXAMPLE.elf
+ 
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+arm-none-eabi-objdump -h -S  NUC.L053_MPU9250_EXAMPLE.elf  > "NUC.L053_MPU9250_EXAMPLE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46596	    476	   3468	  50540	   c56c	NUC.L053_MPU9250_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+Finished building: NUC.L053_MPU9250_EXAMPLE.list
+ 
+10:41:09 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-gcc -o "NUC.L053_MPU9250_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_MPU9250_EXAMPLE\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_MPU9250_EXAMPLE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUC.L053_MPU9250_EXAMPLE.elf
+ 
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+arm-none-eabi-objdump -h -S  NUC.L053_MPU9250_EXAMPLE.elf  > "NUC.L053_MPU9250_EXAMPLE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46596	    476	   3468	  50540	   c56c	NUC.L053_MPU9250_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+Finished building: NUC.L053_MPU9250_EXAMPLE.list
+ 
+10:42:03 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc -o "NUC.L053_MPU9250_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_MPU9250_EXAMPLE\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_MPU9250_EXAMPLE.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUC.L053_MPU9250_EXAMPLE.elf
+ 
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+arm-none-eabi-objdump -h -S  NUC.L053_MPU9250_EXAMPLE.elf  > "NUC.L053_MPU9250_EXAMPLE.list"
+   text	   data	    bss	    dec	    hex	filename
+  46596	    476	   3468	  50540	   c56c	NUC.L053_MPU9250_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+Finished building: NUC.L053_MPU9250_EXAMPLE.list
+ 
+10:43:32 **** Incremental Build of configuration Debug for project NUC.L053_MPU9250_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-size   NUC.L053_MPU9250_EXAMPLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46596	    476	   3468	  50540	   c56c	NUC.L053_MPU9250_EXAMPLE.elf
+Finished building: default.size.stdout
  
