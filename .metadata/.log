@@ -10280,3 +10280,57 @@ org.eclipse.core.runtime.CoreException: attempt to set description for a project
 
 !ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 10:41:22.274
 !MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-20 13:42:08.803
+!MESSAGE Indexed 'NUC.L053_DGS_SERVO_3003' (20 sources, 82 headers) in 1.8 sec: 4,515 declarations; 25,885 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0066%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:02:21.231
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 12 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:02:21.232
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:02:21.232
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 12 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:02:21.233
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:03:23.631
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 14 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:03:23.631
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:03:23.632
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 14 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:03:23.632
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-07-20 14:05:17.485
+!MESSAGE Indexed 'NUC.L053_SERVO_WITH_JOYSTICK' (20 sources, 82 headers) in 1.14 sec: 4,515 declarations; 25,885 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0066%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:45:02.171
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 19 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:45:02.171
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:45:02.171
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 19 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 14:45:02.172
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 15:15:25.457
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 28 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 15:15:25.458
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 15:15:25.458
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 28 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-07-20 15:15:25.459
+!MESSAGE Existing sessions are:
