@@ -1,126 +1,14 @@
-15:04:21 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
+19:04:57 **** Incremental Build of configuration Debug for project NUC.L053_BOOTLOADER_EXAMPLE_2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
+arm-none-eabi-gcc -o "NUC.L053_BOOTLOADER_EXAMPLE_2.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_BOOTLOADER_EXAMPLE_2\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_BOOTLOADER_EXAMPLE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: NUC.L053_BOOTLOADER_EXAMPLE_2.elf
  
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
+arm-none-eabi-size   NUC.L053_BOOTLOADER_EXAMPLE_2.elf 
+arm-none-eabi-objdump -h -S  NUC.L053_BOOTLOADER_EXAMPLE_2.elf  > "NUC.L053_BOOTLOADER_EXAMPLE_2.list"
    text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
+  23636	    120	   3424	  27180	   6a2c	NUC.L053_BOOTLOADER_EXAMPLE_2.elf
 Finished building: default.size.stdout
  
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:04:24 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-15:06:37 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-15:08:40 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12116	     20	   1820	  13956	   3684	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:11:31 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12116	     20	   1820	  13956	   3684	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:11:41 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:11:56 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-15:15:15 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:15:49 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-15:16:51 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12136	     20	   1820	  13976	   3698	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
- 
-15:19:37 **** Incremental Build of configuration Debug for project NUC.L053_SERVO_WITH_JOYSTICK ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L053xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "NUC.L053_SERVO_WITH_JOYSTICK.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.L053_SERVO_WITH_JOYSTICK\STM32L053R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.L053_SERVO_WITH_JOYSTICK.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUC.L053_SERVO_WITH_JOYSTICK.elf
- 
-arm-none-eabi-size   NUC.L053_SERVO_WITH_JOYSTICK.elf 
-arm-none-eabi-objdump -h -S  NUC.L053_SERVO_WITH_JOYSTICK.elf  > "NUC.L053_SERVO_WITH_JOYSTICK.list"
-   text	   data	    bss	    dec	    hex	filename
-  12132	     20	   1820	  13972	   3694	NUC.L053_SERVO_WITH_JOYSTICK.elf
-Finished building: default.size.stdout
- 
-Finished building: NUC.L053_SERVO_WITH_JOYSTICK.list
+Finished building: NUC.L053_BOOTLOADER_EXAMPLE_2.list
  
