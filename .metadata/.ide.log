@@ -1013,3 +1013,4 @@
 2023-07-22 18:45:43,094 [INFO] CADModel:165 - CPN selected for project levelSTM32L053R8T3
 2023-07-22 18:45:43,094 [INFO] CADModel:114 - Register for checkConnection events
 2023-07-22 18:45:43,145 [INFO] OpenFileManager:328 - Restore cursor
+2023-07-22 19:11:17,638 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
