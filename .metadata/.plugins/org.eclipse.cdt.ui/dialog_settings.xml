@@ -24,4 +24,13 @@
 	<section name="OptionalMessageDialog.hide.">
 		<item key="askReindex.detail" value="0"/>
 	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="HAL_FLASH"/>
+			<item value="bootloader_go_to_addr_cmd"/>
+			<item value="bl_rx_data"/>
+		</list>
+	</section>
 </section>

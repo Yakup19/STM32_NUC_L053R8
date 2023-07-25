@@ -23,7 +23,7 @@
 #define ADDR_VALID			0x00
 #define ADDR_INVALID		0x01
 
-
+#define RDP_REG				0x1FFF7800
 #define G0_FLASH_END 		0x0801FFFF
 #define SRAM1_SIZE			112*1024
 #define SRAM1_END			(SRAM1_BASE + SRAM1_SIZE)

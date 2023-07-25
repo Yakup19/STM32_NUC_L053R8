@@ -110,13 +110,13 @@ void bootloader_uart_data_read(void) {
 			bootloader_get_cid_cmd(bootloader_rx_data); //calıisiyor
 			break;
 		case BL_GET_RDP_STATUS:
-			bootloader_get_rdp_cmd(bootloader_rx_data);
+			bootloader_get_rdp_cmd(bootloader_rx_data);// calısiyor
 			break;
 		case BL_GO_TO_ADDR:
-			bootloader_go_to_addr_cmd(bootloader_rx_data);
+			bootloader_go_to_addr_cmd(bootloader_rx_data);// calısiyor
 			break;
 		case BL_FLASH_ERASE:
-			bootloader_flash_erase_cmd(bootloader_rx_data);
+			bootloader_flash_erase_cmd(bootloader_rx_data);// calısiyor
 			break;
 		case BL_MEM_WRITE:
 			bootloader_mem_write_cmd(bootloader_rx_data);

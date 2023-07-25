@@ -149,7 +149,7 @@ void bootloader_flash_erase_cmd(uint8_t *bl_rx_data) {
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage("Checksum success ");
 		bootloader_send_ack(1);
-		printMessage("Initial Sector: %d Nubmer Of Secotrs: %d ", bl_rx_data[2],
+		printMessage("Initial Sector: %d Number Of Sectors: %d ", bl_rx_data[2],
 				bl_rx_data[3]);
 
 		eraseStatus = execute_flash_erase(bl_rx_data[2], bl_rx_data[3]);
@@ -168,12 +168,16 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 	uint8_t writeStatus = 0x00;
 	uint8_t checkSum = 0;
 	uint8_t length = 0;
-
+	uint32_t memAddress=0;
 	length = bl_rx_data[0];
 
 	uint8_t payloadLength = bl_rx_data[6];
 
-	uint32_t memAddress = *((uint32_t*) (&bl_rx_data[2]));
+
+	memAddress |= ((bl_rx_data[2]) & 0xFFFFFFFF);
+	memAddress |= ((bl_rx_data[3]) & 0xFFFFFFFF) << 8;
+	memAddress |= ((bl_rx_data[4]) & 0xFFFFFFFF) << 16;
+	memAddress |= ((bl_rx_data[5]) & 0xFFFFFFFF) << 24;
 
 	checkSum = bl_rx_data[length];
 
@@ -318,7 +322,7 @@ void bootloader_get_rdp_cmd(uint8_t *bl_rx_data) {
 		printMessage(" Checksum succes ");
 		bootloader_send_ack(1);
 		rdpLevel = get_flash_rdp_level();
-		printMessage(" STM32F4 RDP Level: %d %#x ", rdpLevel, rdpLevel);
+		printMessage("RDP Level: %d", rdpLevel);
 		bootloader_uart_write_data(&rdpLevel, 1);
 	} else {
 		printMessage(" Checksum fail ");
@@ -351,12 +355,13 @@ uint16_t get_mcu_chip_id(void) {
 }
 
 uint8_t get_flash_rdp_level(void) {
-	uint8_t rdp_level = 0;
+	uint8_t rdp_status = 0;
 
 #if	1
 
-	volatile uint32_t *OB_Addr = (uint32_t*) 0x1FFFC000;
-	rdp_level = (uint8_t) (*OB_Addr >> 8);
+	volatile uint32_t *OB_Addr = (uint32_t*) RDP_REG;
+	rdp_status = (uint8_t) ((*OB_Addr )& 0x00000000FF);
+
 
 #else
 
@@ -366,7 +371,7 @@ uint8_t get_flash_rdp_level(void) {
 
 #endif
 
-	return rdp_level;
+	return rdp_status;
 }
 
 uint8_t bootloader_verify_address(uint32_t goAddress) {
@@ -381,26 +386,24 @@ uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {
 	uint32_t SectorError = 0;
 	HAL_StatusTypeDef status = { 0 };
 
-	if (numberOfSector > 11)
+	if (numberOfSector > 63)
 		return INVALID_SECTOR;
 
-	if ((sectorNumber <= 11) || (sectorNumber == 0xFF)) {
+	if ((sectorNumber <= 63) || (sectorNumber == 0xFF)) {
 		if (sectorNumber == 0xFF) {
-			FlashEraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+			FlashEraseInitStruct.TypeErase = FLASH_TYPEERASE_MASS;
 		} else {
-			uint8_t remainingSector = 11 - sectorNumber;
+			uint8_t remainingSector = 63 - sectorNumber;
 
 			if (sectorNumber > remainingSector)
 				sectorNumber = remainingSector;
 
 			FlashEraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
-			//FlashEraseInitStruct.Sector = sectorNumber;
-			//FlashEraseInitStruct.NbSectors = numberOfSector;
+			FlashEraseInitStruct.NbPages = numberOfSector;
 		}
-		//FlashEraseInitStruct.Banks = FLASH_BANK_1;
+		FlashEraseInitStruct.Banks = FLASH_BANK_1;
 
 		HAL_FLASH_Unlock();
-		//FlashEraseInitStruct.VoltageRange = FLASH_VOLTAGE_RANGE_3;
 		status = (uint8_t) HAL_FLASHEx_Erase(&FlashEraseInitStruct,
 				&SectorError);
 		HAL_FLASH_Lock();
@@ -413,11 +416,14 @@ uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {
 
 uint8_t execute_memory_write(uint8_t *Buffer, uint32_t memAddress, uint32_t len) {
 	uint8_t status = HAL_OK;
-
+	uint64_t data=0;
 	HAL_FLASH_Unlock();
-
+	FLASH->CR |= 1<<18;
 	for (uint32_t i = 0; i < len; i++) {
-		//status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_BYTE, memAddress+i, Buffer[i]);
+
+
+		while((	FLASH->SR !=0));
+		status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, memAddress+i, *(uint64_t*)&Buffer[i]);
 	}
 
 	HAL_FLASH_Lock();

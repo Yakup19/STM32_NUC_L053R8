@@ -576,3 +576,538 @@
 2023-07-25 13:36:09,421 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
 2023-07-25 13:47:39,870 [INFO] I2cTimingTraitement:330 - 0x00602173
 2023-07-25 13:47:39,932 [INFO] I2cTimingTraitement:330 - 0x00602173
+2023-07-25 13:50:13,746 [INFO] I2cTimingTraitement:330 - 0x00602173
+2023-07-25 13:50:17,291 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 865533824 Bytes (1073741824)
+2023-07-25 13:50:17,457 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 895823288 Bytes (1073741824)
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 13:50:17,637 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 13:50:17,638 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 13:50:17,795 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp_save
+2023-07-25 13:50:17,853 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp
+2023-07-25 13:50:17,881 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp_save
+2023-07-25 13:50:17,936 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp
+2023-07-25 13:50:18,016 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c_save
+2023-07-25 13:50:18,129 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c
+2023-07-25 13:50:18,133 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 13:50:18,178 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h
+2023-07-25 13:50:18,187 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 13:50:18,259 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 13:50:18,262 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp_save
+2023-07-25 13:50:18,303 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp
+2023-07-25 13:50:18,310 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 13:50:18,359 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 13:50:18,372 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h_save
+2023-07-25 13:50:18,429 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h
+2023-07-25 13:50:18,433 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c_save
+2023-07-25 13:50:18,504 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c
+2023-07-25 13:50:18,842 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 110mS.
+2023-07-25 13:50:18,845 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 13:50:19,149 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 13:50:20,070 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1225mS.
+2023-07-25 13:50:20,070 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:50:20,073 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:51:43,274 [INFO] Gpio:273 - dependency for GPIO [I2C1, RCC, SYS, USART2]
+2023-07-25 13:52:05,636 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 546360856 Bytes (1073741824)
+2023-07-25 13:52:06,364 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 631817752 Bytes (1073741824)
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 13:52:06,514 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 13:52:06,515 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 13:52:06,623 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp_save
+2023-07-25 13:52:06,669 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp
+2023-07-25 13:52:06,691 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp_save
+2023-07-25 13:52:06,736 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp
+2023-07-25 13:52:06,861 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c_save
+2023-07-25 13:52:06,928 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c
+2023-07-25 13:52:06,934 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 13:52:06,980 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h
+2023-07-25 13:52:06,988 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 13:52:07,063 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 13:52:07,066 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp_save
+2023-07-25 13:52:07,108 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp
+2023-07-25 13:52:07,115 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 13:52:07,161 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 13:52:07,173 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h_save
+2023-07-25 13:52:07,225 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h
+2023-07-25 13:52:07,229 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c_save
+2023-07-25 13:52:07,296 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c
+2023-07-25 13:52:07,750 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 108mS.
+2023-07-25 13:52:07,753 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 13:52:07,890 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 13:52:08,842 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1089mS.
+2023-07-25 13:52:08,843 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:52:08,846 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:53:21,878 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 464810104 Bytes (1073741824)
+2023-07-25 13:53:22,042 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 489449592 Bytes (1073741824)
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 13:53:22,164 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 13:53:22,165 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 13:53:22,257 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp_save
+2023-07-25 13:53:22,300 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\license.tmp
+2023-07-25 13:53:22,324 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp_save
+2023-07-25 13:53:22,368 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\gpio.tmp
+2023-07-25 13:53:22,434 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c_save
+2023-07-25 13:53:22,481 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_it.c
+2023-07-25 13:53:22,486 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 13:53:22,529 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_it.h
+2023-07-25 13:53:22,537 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 13:53:22,599 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 13:53:22,602 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp_save
+2023-07-25 13:53:22,644 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\MXTmpFiles\system.tmp
+2023-07-25 13:53:22,650 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 13:53:22,696 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 13:53:22,708 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h_save
+2023-07-25 13:53:22,763 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Inc\main.h
+2023-07-25 13:53:22,768 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c_save
+2023-07-25 13:53:22,835 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_USER_APP\Core\Src\main.c
+2023-07-25 13:53:23,325 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 135mS.
+2023-07-25 13:53:23,328 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 13:53:23,468 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 13:53:24,394 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1066mS.
+2023-07-25 13:53:24,395 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-07-25 13:53:24,397 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:54:27,155 [INFO] MainUpdater:2868 - connection check result : 10
+2023-07-25 13:54:27,155 [INFO] MainUpdater:2868 - connection check result : 10
+2023-07-25 13:54:27,225 [INFO] I2cTimingTraitement:330 - 0x00602173
+2023-07-25 13:54:27,226 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-07-25 13:54:27,226 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.90
+2023-07-25 13:54:27,244 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-07-25 13:54:27,244 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-07-25 13:54:27,244 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-07-25 13:54:27,244 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-07-25 13:54:27,246 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 759824840 Bytes (1073741824)
+2023-07-25 13:54:27,246 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-07-25 13:54:27,246 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.90
+2023-07-25 13:54:27,246 [INFO] OpenFileManager:308 - Change cursor
+2023-07-25 13:54:27,255 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2023-07-25 13:54:27,257 [INFO] Mcu:1946 - Initializing MCU STM32G070RBTx STM32G070RBTx STM32G070RBT6
+2023-07-25 13:54:27,982 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-07-25 13:54:28,184 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-07-25 13:54:28,185 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-07-25 13:54:28,185 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-07-25 13:54:28,185 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-07-25 13:54:28,185 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,191 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,192 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 13:54:28,199 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-07-25 13:54:28,529 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-07-25 13:54:28,533 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-07-25 13:54:28,667 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 731867360 Bytes (1073741824)
+2023-07-25 13:54:28,695 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-07-25 13:54:28,695 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.3
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-07-25 13:54:28,695 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-07-25 13:54:28,696 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-07-25 13:54:28,769 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-07-25 13:54:28,770 [INFO] PinOutPanel:1499 - setPackage(STM32G070RBTx,LQFP64)
+2023-07-25 13:54:28,915 [INFO] UtilMem:75 - Before build in PCC Used Memory: 849936248 Bytes (1073741824)
+2023-07-25 13:54:29,068 [INFO] UtilMem:75 - After build in PCC Used Memory: 360593424 Bytes (1073741824)
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,079 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,080 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,082 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,082 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,082 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,082 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 13:54:29,110 [INFO] CADModel:165 - CPN selected for project levelSTM32G070RBT6
+2023-07-25 13:54:29,110 [INFO] CADModel:114 - Register for checkConnection events
+2023-07-25 13:54:29,167 [INFO] OpenFileManager:328 - Restore cursor
+2023-07-25 13:54:36,430 [INFO] Gpio:273 - dependency for GPIO [I2C1, RCC, SYS, USART2]
+2023-07-25 13:54:44,812 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 786481280 Bytes (1073741824)
+2023-07-25 13:54:44,962 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 809690816 Bytes (1073741824)
+2023-07-25 13:54:45,083 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 13:54:45,083 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 13:54:45,083 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 13:54:45,084 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 13:54:45,084 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 13:54:45,084 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CRC
+2023-07-25 13:54:45,084 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 13:54:45,084 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 13:54:45,242 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp_save
+2023-07-25 13:54:45,298 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp
+2023-07-25 13:54:45,332 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp_save
+2023-07-25 13:54:45,395 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp
+2023-07-25 13:54:45,579 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c_save
+2023-07-25 13:54:45,630 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c
+2023-07-25 13:54:45,635 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 13:54:45,681 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h
+2023-07-25 13:54:45,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 13:54:45,756 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 13:54:45,759 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp_save
+2023-07-25 13:54:45,802 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp
+2023-07-25 13:54:45,809 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 13:54:45,860 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 13:54:45,877 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h_save
+2023-07-25 13:54:45,926 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h
+2023-07-25 13:54:45,930 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c_save
+2023-07-25 13:54:46,004 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c
+2023-07-25 13:54:46,349 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 112mS.
+2023-07-25 13:54:46,352 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 13:54:46,620 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 13:54:46,621 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2023-07-25 13:54:46,625 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2023-07-25 13:54:47,555 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1203mS.
+2023-07-25 13:54:47,556 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-07-25 13:54:47,558 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-07-25 13:55:11,254 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 360208328 Bytes (1073741824)
+2023-07-25 13:55:11,406 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 382228424 Bytes (1073741824)
+2023-07-25 13:55:11,555 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CRC
+2023-07-25 13:55:11,556 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 13:55:11,556 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 13:55:11,662 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp_save
+2023-07-25 13:55:11,752 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp
+2023-07-25 13:55:11,789 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp_save
+2023-07-25 13:55:11,834 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp
+2023-07-25 13:55:11,942 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c_save
+2023-07-25 13:55:11,999 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c
+2023-07-25 13:55:12,003 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 13:55:12,047 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h
+2023-07-25 13:55:12,054 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 13:55:12,113 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 13:55:12,117 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp_save
+2023-07-25 13:55:12,157 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp
+2023-07-25 13:55:12,164 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 13:55:12,210 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 13:55:12,223 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h_save
+2023-07-25 13:55:12,269 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h
+2023-07-25 13:55:12,273 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c_save
+2023-07-25 13:55:12,348 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c
+2023-07-25 13:55:12,690 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 111mS.
+2023-07-25 13:55:12,693 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 13:55:12,987 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 13:55:13,951 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1257mS.
+2023-07-25 13:55:13,951 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:55:13,960 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 13:55:19,677 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 13:55:22,267 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 13:55:47,855 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 13:55:50,330 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 14:04:15,612 [INFO] Gpio:273 - dependency for GPIO [I2C1, RCC, SYS, USART2]
+2023-07-25 14:04:20,021 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-07-25 14:04:25,015 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 446837664 Bytes (1069547520)
+2023-07-25 14:04:25,173 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 470432672 Bytes (1069547520)
+2023-07-25 14:04:25,350 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: CRC
+2023-07-25 14:04:25,351 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-07-25 14:04:25,352 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-07-25 14:04:25,521 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp_save
+2023-07-25 14:04:25,586 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\license.tmp
+2023-07-25 14:04:25,616 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp_save
+2023-07-25 14:04:25,669 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\gpio.tmp
+2023-07-25 14:04:25,799 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c_save
+2023-07-25 14:04:25,847 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_it.c
+2023-07-25 14:04:25,851 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h_save
+2023-07-25 14:04:25,894 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_it.h
+2023-07-25 14:04:25,902 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c_save
+2023-07-25 14:04:25,963 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\stm32g0xx_hal_msp.c
+2023-07-25 14:04:25,966 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp_save
+2023-07-25 14:04:26,006 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\MXTmpFiles\system.tmp
+2023-07-25 14:04:26,013 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h_save
+2023-07-25 14:04:26,060 [INFO] CodeEngine:335 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\stm32g0xx_hal_conf.h
+2023-07-25 14:04:26,072 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h_save
+2023-07-25 14:04:26,118 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Inc\main.h
+2023-07-25 14:04:26,123 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c_save
+2023-07-25 14:04:26,194 [INFO] CodeEngine:279 - Generated code: C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\Core\Src\main.c
+2023-07-25 14:04:26,540 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 115mS.
+2023-07-25 14:04:26,543 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-07-25 14:04:26,683 [INFO] ConfigFileManager:1457 - The Die is : DIE460
+2023-07-25 14:04:27,759 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1215mS.
+2023-07-25 14:04:27,759 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 14:04:27,761 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-07-25 14:19:15,655 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 14:19:33,931 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 14:24:19,945 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 14:24:22,761 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:13:05,554 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:26:23,136 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:26:38,323 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:29:06,656 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:35:29,042 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 15:37:24,907 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-07-25 18:08:16,064 [INFO] MainUpdater:2868 - connection check result : 10
+2023-07-25 18:08:16,065 [INFO] MainUpdater:2868 - connection check result : 10
+2023-07-25 18:08:16,162 [INFO] I2cTimingTraitement:330 - 0x00602173
+2023-07-25 18:08:16,165 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-07-25 18:08:16,165 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.90
+2023-07-25 18:08:16,186 [WARN] ThirdParty:871 - waiting for thirdparty lock release [close project]
+2023-07-25 18:08:16,186 [INFO] ThirdParty:873 - entering critical section [close project]
+2023-07-25 18:08:16,186 [INFO] ThirdParty:883 - exiting critical section [close project]
+2023-07-25 18:08:16,187 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-07-25 18:08:16,191 [INFO] UtilMem:75 - Begin LoadConfig() Used Memory: 481863264 Bytes (1073741824)
+2023-07-25 18:08:16,191 [INFO] MicroXplorer:468 - Change Database Path : 
+2023-07-25 18:08:16,191 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.90
+2023-07-25 18:08:16,191 [INFO] OpenFileManager:308 - Change cursor
+2023-07-25 18:08:16,202 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2023-07-25 18:08:16,204 [INFO] Mcu:1946 - Initializing MCU STM32G070RBTx STM32G070RBTx STM32G070RBT6
+2023-07-25 18:08:16,925 [INFO] Context:659 - Trying to add GPIOservice into a context  which must be forbidden
+2023-07-25 18:08:17,147 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-07-25 18:08:17,147 [INFO] RtosManager:555 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-07-25 18:08:17,147 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-07-25 18:08:17,147 [INFO] RtosManager:555 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-07-25 18:08:17,147 [WARN] ModelIntegratedComponent:184 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,153 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,154 [WARN] ModelIntegratedComponent:63 - No mode defined for component null
+2023-07-25 18:08:17,159 [INFO] ThirdPartyModel:298 - Start build external matchings
+2023-07-25 18:08:17,422 [INFO] ThirdPartyModel:316 - End build external matchings
+2023-07-25 18:08:17,426 [INFO] ImportTextPane:194 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-07-25 18:08:17,570 [INFO] UtilMem:75 - End LoadConfig() Used Memory: 831935664 Bytes (1073741824)
+2023-07-25 18:08:17,605 [WARN] ThirdParty:833 - waiting for thirdparty lock release [change project]
+2023-07-25 18:08:17,605 [INFO] ThirdParty:835 - entering critical section [change project]
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.6.3
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-07-25 18:08:17,605 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-07-25 18:08:17,606 [INFO] ThirdParty:841 - exiting critical section [change project]
+2023-07-25 18:08:17,680 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2023-07-25 18:08:17,681 [INFO] PinOutPanel:1499 - setPackage(STM32G070RBTx,LQFP64)
+2023-07-25 18:08:17,868 [INFO] UtilMem:75 - Before build in PCC Used Memory: 418945664 Bytes (1073741824)
+2023-07-25 18:08:18,053 [INFO] UtilMem:75 - After build in PCC Used Memory: 488151680 Bytes (1073741824)
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,070 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,071 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,072 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,072 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,072 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,072 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,072 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,073 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,073 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,073 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,073 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,073 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,074 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,074 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,074 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2023-07-25 18:08:18,102 [INFO] CADModel:165 - CPN selected for project levelSTM32G070RBT6
+2023-07-25 18:08:18,103 [INFO] CADModel:114 - Register for checkConnection events
+2023-07-25 18:08:18,160 [INFO] OpenFileManager:328 - Restore cursor
+2023-07-25 18:32:27,694 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
