@@ -23,8 +23,7 @@ void bootloader_get_ver_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_length = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*) bl_rx_data
-			+ command_packet_length - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*) bl_rx_data + command_packet_length - 4));
 
 	// crc control
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_length - 4, host_crc)) {
@@ -44,14 +43,12 @@ void bootloader_get_help_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
-	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
-			host_crc)) {
+	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage("Checksum success");
 		bootloader_send_ack(strlen(supported_commands));
-		bootloader_uart_write_data(supported_commands,
-				strlen(supported_commands));
+		bootloader_uart_write_data(supported_commands, strlen(supported_commands));
 		for (int i = 0; i < strlen(supported_commands); i++) {
 			printMessage("%#x ", supported_commands[i]);
 		}
@@ -68,7 +65,7 @@ void bootloader_get_cid_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -92,7 +89,7 @@ void bootloader_go_to_addr_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data[0] + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -147,7 +144,7 @@ void bootloader_flash_erase_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage("Checksum success ");
@@ -184,7 +181,7 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage(" Checksum success ");
@@ -242,7 +239,7 @@ void bootloader_read_sector_protection_status_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -267,7 +264,7 @@ void bootloader_disable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -314,7 +311,7 @@ void bootloader_get_rdp_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) (bl_rx_data + command_packet_len - 4));
+	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -375,7 +372,8 @@ uint8_t get_flash_rdp_level(void) {
 uint8_t bootloader_verify_address(uint32_t goAddress) {
 	if (goAddress >= FLASH_BASE && goAddress <= G0_FLASH_END)
 		return ADDR_VALID;
-
+	else
+	return ADDR_INVALID;
 }
 
 uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {

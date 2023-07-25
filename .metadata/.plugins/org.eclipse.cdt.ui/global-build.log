@@ -1,4 +1,4 @@
-13:48:21 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
+14:04:33 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G070xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "NUC.G070_BOOTLOADER_EXAMPLE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\yakup\OneDrive\Belgeler\STM32CubeIDE\Workpsace_E2DAS\NUC.G070_BOOTLOADER_EXAMPLE\STM32G070RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUC.G070_BOOTLOADER_EXAMPLE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,15 +7,29 @@ Finished building target: NUC.G070_BOOTLOADER_EXAMPLE.elf
 arm-none-eabi-size   NUC.G070_BOOTLOADER_EXAMPLE.elf 
 arm-none-eabi-objdump -h -S  NUC.G070_BOOTLOADER_EXAMPLE.elf  > "NUC.G070_BOOTLOADER_EXAMPLE.list"
    text	   data	    bss	    dec	    hex	filename
-  27084	    120	   3496	  30700	   77ec	NUC.G070_BOOTLOADER_EXAMPLE.elf
+  27200	    120	   3496	  30816	   7860	NUC.G070_BOOTLOADER_EXAMPLE.elf
 Finished building: default.size.stdout
  
 Finished building: NUC.G070_BOOTLOADER_EXAMPLE.list
  
-13:48:29 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
+14:04:36 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
 make -j8 all 
 arm-none-eabi-size   NUC.G070_BOOTLOADER_EXAMPLE.elf 
    text	   data	    bss	    dec	    hex	filename
-  27084	    120	   3496	  30700	   77ec	NUC.G070_BOOTLOADER_EXAMPLE.elf
+  27200	    120	   3496	  30816	   7860	NUC.G070_BOOTLOADER_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+14:07:38 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-size   NUC.G070_BOOTLOADER_EXAMPLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27200	    120	   3496	  30816	   7860	NUC.G070_BOOTLOADER_EXAMPLE.elf
+Finished building: default.size.stdout
+ 
+14:10:05 **** Incremental Build of configuration Debug for project NUC.G070_BOOTLOADER_EXAMPLE ****
+make -j8 all 
+arm-none-eabi-size   NUC.G070_BOOTLOADER_EXAMPLE.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27200	    120	   3496	  30816	   7860	NUC.G070_BOOTLOADER_EXAMPLE.elf
 Finished building: default.size.stdout
  
