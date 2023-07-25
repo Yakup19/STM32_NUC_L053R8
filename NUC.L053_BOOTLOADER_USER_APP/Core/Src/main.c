@@ -99,11 +99,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	SSD1306_GotoXY(0, 0);
-	SSD1306_Puts("Merhaba", &Font_11x18, 1);
-	SSD1306_GotoXY(10, 30);
-	SSD1306_Puts("  WORLD :)", &Font_11x18, 1);
-	SSD1306_UpdateScreen(); //display
+
 
 	//HAL_Delay(2000);
 	while (1) {
@@ -121,7 +117,6 @@ int main(void)
 		SSD1306_GotoXY(10, 30);
 		SSD1306_Puts("  WORKING :)", &Font_11x18, 1);
 		SSD1306_UpdateScreen(); //display
-
 		HAL_Delay(500);
     /* USER CODE END WHILE */
 

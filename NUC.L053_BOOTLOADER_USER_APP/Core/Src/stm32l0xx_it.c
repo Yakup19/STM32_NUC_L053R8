@@ -140,6 +140,19 @@ void SysTick_Handler(void)
 /* please refer to the startup file (startup_stm32l0xx.s).                    */
 /******************************************************************************/
 
+/**
+  * @brief This function handles RCC and CRS global interrupt.
+  */
+void RCC_CRS_IRQHandler(void)
+{
+  /* USER CODE BEGIN RCC_CRS_IRQn 0 */
+
+  /* USER CODE END RCC_CRS_IRQn 0 */
+  /* USER CODE BEGIN RCC_CRS_IRQn 1 */
+
+  /* USER CODE END RCC_CRS_IRQn 1 */
+}
+
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */
