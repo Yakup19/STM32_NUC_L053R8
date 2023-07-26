@@ -99,10 +99,10 @@ void bootloader_uart_data_read(void) {
 		HAL_UART_Receive(&huart2, &bootloader_rx_data[1], bl_rx_length, HAL_MAX_DELAY);
 
 		switch (bootloader_rx_data[1]) {
-		case BL_GET_VER:/*CALISIYOR*/
-			bootloader_get_ver_cmd(bootloader_rx_data); //calıisiyor
+		case BL_GET_VER:/*CALISIYOR CRC düzeltmesi yapıldı*/
+			bootloader_get_ver_cmd(bootloader_rx_data); //calisiyor
 			break;
-		case BL_GET_HELP:/*CALISIYOR*/
+		case BL_GET_HELP:/*CALISIYOR CRC düzeltmesi yapıldı test edilecek */
 			bootloader_get_help_cmd(bootloader_rx_data); //calıisiyor
 			break;
 		case BL_GET_CID:/*CALISIYOR*/
@@ -294,7 +294,7 @@ static void MX_CRC_Init(void)
   hcrc.Init.DefaultInitValueUse = DEFAULT_INIT_VALUE_ENABLE;
   hcrc.Init.InputDataInversionMode = CRC_INPUTDATA_INVERSION_NONE;
   hcrc.Init.OutputDataInversionMode = CRC_OUTPUTDATA_INVERSION_DISABLE;
-  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_BYTES;
+  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_WORDS;
   if (HAL_CRC_Init(&hcrc) != HAL_OK)
   {
     Error_Handler();

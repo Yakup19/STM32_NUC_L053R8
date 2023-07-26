@@ -1,3 +1,5 @@
 bootloader_rx_data
 go_to_address
 Buffer
+crcval
+host_crc

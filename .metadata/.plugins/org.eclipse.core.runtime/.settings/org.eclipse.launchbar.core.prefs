@@ -1,9 +1,10 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_USER_APP,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:003_BOOTLOADER_USER_APPLICATION\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FW_AKS_2023\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:L053_UART_WITH_LED\ Debug/activeLaunchMode=debug
@@ -11,6 +12,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:L053_UART_WITH_LED\ Debug/activ
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_USER_APP/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_CRC32_EXAMPLE\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE_2/activeLaunchMode=debug

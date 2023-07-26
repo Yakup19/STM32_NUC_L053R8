@@ -17,14 +17,17 @@ extern CRC_HandleTypeDef hcrc;
 const uint32_t go_to_address = 0;
 void bootloader_get_ver_cmd(uint8_t *bl_rx_data) {
 	uint8_t bl_Version = 0;
+	uint32_t host_crc=0;
 
 	printMessage("Bootloaer_Get_Ver_Cmd");
 	printMessage(" BL_VER :%#x,%#x  ", bl_rx_data[1], bl_rx_data[2]);
 
 	uint32_t command_packet_length = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*) bl_rx_data + command_packet_length - 4));
-
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 	// crc control
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_length - 4, host_crc)) {
 		printMessage("Checksum success");
@@ -40,10 +43,14 @@ void bootloader_get_ver_cmd(uint8_t *bl_rx_data) {
 
 void bootloader_get_help_cmd(uint8_t *bl_rx_data) {
 	printMessage("bootloader_get_help_cmd");
-
+	uint32_t host_crc = 0;
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage("Checksum success");
@@ -174,10 +181,10 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 	uint8_t payloadLength = bl_rx_data[6];
 
 
-	memAddress |= ((bl_rx_data[2]) & 0xFFFFFFFF);
-	memAddress |= ((bl_rx_data[3]) & 0xFFFFFFFF) << 8;
-	memAddress |= ((bl_rx_data[4]) & 0xFFFFFFFF) << 16;
-	memAddress |= ((bl_rx_data[5]) & 0xFFFFFFFF) << 24;
+	memAddress |= ((bl_rx_data[5]) & 0xFFFFFFFF);
+	memAddress |= ((bl_rx_data[4]) & 0xFFFFFFFF) << 8;
+	memAddress |= ((bl_rx_data[3]) & 0xFFFFFFFF) << 16;
+	memAddress |= ((bl_rx_data[2]) & 0xFFFFFFFF) << 24;
 
 	checkSum = bl_rx_data[length];
 
@@ -305,7 +312,7 @@ uint8_t bootloader_verify_crc(uint8_t *Buffer, uint32_t len, uint32_t crcHost) {
 		return CRC_SUCCESS;
 	}
 
-	return CRC_SUCCESS;
+	return CRC_FAIL;
 }
 
 void bootloader_get_rdp_cmd(uint8_t *bl_rx_data) {
