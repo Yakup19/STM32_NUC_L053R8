@@ -9,6 +9,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FW_AKS_2023\ Debug/activeLaunch
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:L053_UART_WITH_LED\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:L053_UART_WITH_LED\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_USER_APP/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE\ Debug/activeLaunchTarget=null\:---

@@ -96,35 +96,34 @@ void bootloader_uart_data_read(void) {
 
 		bl_rx_length = bootloader_rx_data[0];
 
-		HAL_UART_Receive(&huart2, &bootloader_rx_data[1], bl_rx_length,
-				HAL_MAX_DELAY);
+		HAL_UART_Receive(&huart2, &bootloader_rx_data[1], bl_rx_length, HAL_MAX_DELAY);
 
 		switch (bootloader_rx_data[1]) {
-		case BL_GET_VER:
+		case BL_GET_VER:/*CALISIYOR*/
 			bootloader_get_ver_cmd(bootloader_rx_data); //calıisiyor
 			break;
-		case BL_GET_HELP:
+		case BL_GET_HELP:/*CALISIYOR*/
 			bootloader_get_help_cmd(bootloader_rx_data); //calıisiyor
 			break;
-		case BL_GET_CID:
+		case BL_GET_CID:/*CALISIYOR*/
 			bootloader_get_cid_cmd(bootloader_rx_data); //calıisiyor
 			break;
-		case BL_GET_RDP_STATUS:
+		case BL_GET_RDP_STATUS:/*CALISIYOR*/
 			bootloader_get_rdp_cmd(bootloader_rx_data);// calısiyor
 			break;
-		case BL_GO_TO_ADDR:
+		case BL_GO_TO_ADDR:/*CALISIYOR*/
 			bootloader_go_to_addr_cmd(bootloader_rx_data);// calısiyor
 			break;
-		case BL_FLASH_ERASE:
-			bootloader_flash_erase_cmd(bootloader_rx_data);// calısiyor
+			/*	Once page sonra ondan sonraki kaç tane page silincek ise o girilecek  */
+		case BL_FLASH_ERASE:/*CALISIYOR*/
+			bootloader_flash_erase_cmd(bootloader_rx_data);
 			break;
-		case BL_MEM_WRITE:
+			/*	Yazma yapılmadan önce kullanılacak pageler flash erase yapılacak*/
+		case BL_MEM_WRITE:/*CALISIYOR*/
 			bootloader_mem_write_cmd(bootloader_rx_data);
+			break;
 		case BL_EN_RW_PROTECT:
 			bootloader_enable_read_write_protect_cmd(bootloader_rx_data);
-			break;
-		case BL_READ_SECTOR_P_STATUS:
-			bootloader_read_sector_protection_status_cmd(bootloader_rx_data);
 			break;
 		case BL_DIS_R_W_PROTECT:
 			bootloader_disable_read_write_protect_cmd(bootloader_rx_data);

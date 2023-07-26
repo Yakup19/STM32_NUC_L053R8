@@ -196,6 +196,7 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 		if (bootloader_verify_address(memAddress) == ADDR_VALID) {
 			printMessage(" Valid Memory Write Address ");
 
+
 			writeStatus = execute_memory_write(&bl_rx_data[7], memAddress, payloadLength);
 
 			bootloader_uart_write_data(&writeStatus, 1);
@@ -219,8 +220,7 @@ void bootloader_enable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
 
-	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
-			host_crc)) {
+	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage(" Checksum success ");
 		bootloader_send_ack(1);
 
@@ -236,30 +236,30 @@ void bootloader_enable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 	}
 }
 
-void bootloader_read_sector_protection_status_cmd(uint8_t *bl_rx_data) {
-	uint16_t status = 0;
-
-	printMessage(" bootloader_read_sector_protection_status_cmd ");
-
-	uint32_t command_packet_len = bl_rx_data[0] + 1;
-
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
-
-	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
-			host_crc)) {
-		printMessage(" Checksum success ");
-		bootloader_send_ack(1);
-
-		status = read_OB_r_w_protection_status();
-
-		printMessage(" nWRP status: %#", status);
-		bootloader_uart_write_data((uint8_t*) &status, 2);
-	} else {
-		printMessage(" Checksum fail ");
-		bootloader_send_nack();
-	}
-
-}
+//void bootloader_read_sector_protection_status_cmd(uint8_t *bl_rx_data) {
+//	uint16_t status = 0;
+//
+//	printMessage(" bootloader_read_sector_protection_status_cmd ");
+//
+//	uint32_t command_packet_len = bl_rx_data[0] + 1;
+//
+//	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+//
+//	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
+//			host_crc)) {
+//		printMessage(" Checksum success ");
+//		bootloader_send_ack(1);
+//
+//		status = read_OB_r_w_protection_status();
+//
+//		printMessage(" nWRP status: %#", status);
+//		bootloader_uart_write_data((uint8_t*) &status, 2);
+//	} else {
+//		printMessage(" Checksum fail ");
+//		bootloader_send_nack();
+//	}
+//
+//}
 
 void bootloader_disable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 	uint8_t status = 0;
@@ -380,32 +380,34 @@ uint8_t bootloader_verify_address(uint32_t goAddress) {
 	else
 	return ADDR_INVALID;
 }
-
+/*
+ * sectorNumber Silinecek sektör numarası
+ * numberOfSector sectorNumber'dan sonraki silinecek sektör sayısı
+ *
+ * */
 uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {
 	FLASH_EraseInitTypeDef FlashEraseInitStruct = { 0 };
 	uint32_t SectorError = 0;
 	HAL_StatusTypeDef status = { 0 };
 
-	if (numberOfSector > 63)
+	if (sectorNumber > 63)
 		return INVALID_SECTOR;
 
 	if ((sectorNumber <= 63) || (sectorNumber == 0xFF)) {
 		if (sectorNumber == 0xFF) {
 			FlashEraseInitStruct.TypeErase = FLASH_TYPEERASE_MASS;
 		} else {
-			uint8_t remainingSector = 63 - sectorNumber;
 
-			if (sectorNumber > remainingSector)
-				sectorNumber = remainingSector;
 
 			FlashEraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+			FlashEraseInitStruct.Page = sectorNumber;
+
 			FlashEraseInitStruct.NbPages = numberOfSector;
 		}
 		FlashEraseInitStruct.Banks = FLASH_BANK_1;
 
 		HAL_FLASH_Unlock();
-		status = (uint8_t) HAL_FLASHEx_Erase(&FlashEraseInitStruct,
-				&SectorError);
+		status = (uint8_t) HAL_FLASHEx_Erase(&FlashEraseInitStruct, &SectorError);
 		HAL_FLASH_Lock();
 
 		return status;
@@ -415,18 +417,40 @@ uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {
 }
 
 uint8_t execute_memory_write(uint8_t *Buffer, uint32_t memAddress, uint32_t len) {
-	uint8_t status = HAL_OK;
+	uint8_t status = HAL_ERROR;
 	uint64_t data=0;
+
 	HAL_FLASH_Unlock();
-	FLASH->CR |= 1<<18;
-	for (uint32_t i = 0; i < len; i++) {
-
-
-		while((	FLASH->SR !=0));
-		status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, memAddress+i, *(uint64_t*)&Buffer[i]);
-	}
+	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ECCD);
+	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ECCC);
+	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ECCCIE );
+	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_SYSF_ECC);
+	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ADDR_ECC );
 
 	HAL_FLASH_Lock();
+
+
+	for (uint32_t i = 0; i < len; i= i+8) {
+		//while ((FLASH->SR & FLASH_SR_BSY1)) {}
+		HAL_FLASH_Unlock();
+
+		data=0;
+		data |= ((uint64_t)(Buffer[i+7] &0xFFFFFFFF))<<56;
+		data |= ((uint64_t)(Buffer[i+6] &0xFFFFFFFF))<<48;
+		data |= ((uint64_t)(Buffer[i+5] &0xFFFFFFFF))<<40;
+		data |= ((uint64_t)(Buffer[i+4] &0xFFFFFFFF))<<32;
+		data |= ((uint64_t)(Buffer[i+3] &0xFFFFFFFF))<<24;
+		data |= ((uint64_t)(Buffer[i+2] &0xFFFFFFFF))<<16;
+		data |= ((uint64_t)(Buffer[i+1] &0xFFFFFFFF))<<8;
+		data |= ((uint64_t)(Buffer[i]   &0xFFFFFFFF));
+
+
+		status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, memAddress+i, data);
+		HAL_Delay(3);
+		HAL_FLASH_Lock();
+
+
+	}
 
 	return status;
 }
@@ -493,14 +517,3 @@ uint8_t configure_flash_sector_r_w_protection(uint8_t sector_details,
 	return 0;
 }
 
-uint16_t read_OB_r_w_protection_status() {
-	FLASH_OBProgramInitTypeDef flashOBInitStruct;
-
-	HAL_FLASH_OB_Unlock();
-
-	HAL_FLASHEx_OBGetConfig(&flashOBInitStruct);
-
-	HAL_FLASH_OB_Lock();
-
-	//return flashOBInitStruct.WRPSector;
-}
