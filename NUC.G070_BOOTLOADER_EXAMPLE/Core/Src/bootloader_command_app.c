@@ -67,12 +67,17 @@ void bootloader_get_help_cmd(uint8_t *bl_rx_data) {
 
 void bootloader_get_cid_cmd(uint8_t *bl_rx_data) {
 	uint16_t cID = 0;
+	uint32_t host_crc = 0;
 
 	printMessage("bootloader_get_cid_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -91,12 +96,17 @@ void bootloader_go_to_addr_cmd(uint8_t *bl_rx_data) {
 	uint32_t go_to_address = 0;
 	uint8_t addr_valid = ADDR_VALID;
 	uint8_t addr_invalid = ADDR_INVALID;
+	uint32_t host_crc = 0;
 
 	printMessage("bootlodaer_go_to_addr_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -146,12 +156,17 @@ void bootloader_go_to_addr_cmd(uint8_t *bl_rx_data) {
 
 void bootloader_flash_erase_cmd(uint8_t *bl_rx_data) {
 	uint8_t eraseStatus = 0;
+	uint32_t host_crc = 0;
 
 	printMessage("bootloader_flash_erase_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage("Checksum success ");
@@ -177,6 +192,7 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 	uint8_t length = 0;
 	uint32_t memAddress=0;
 	length = bl_rx_data[0];
+	uint32_t host_crc = 0;
 
 	uint8_t payloadLength = bl_rx_data[6];
 
@@ -192,7 +208,11 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage(" Checksum success ");
@@ -220,12 +240,17 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 
 void bootloader_enable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 	uint8_t status = 0;
+	uint32_t host_crc = 0;
 
 	printMessage(" bootloader_enable_read_write_protect_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
 		printMessage(" Checksum success ");
@@ -270,12 +295,17 @@ void bootloader_enable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 
 void bootloader_disable_read_write_protect_cmd(uint8_t *bl_rx_data) {
 	uint8_t status = 0;
+	uint32_t host_crc = 0;
 
 	printMessage(" bootloader_disable_read_write_protect_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
@@ -317,12 +347,18 @@ uint8_t bootloader_verify_crc(uint8_t *Buffer, uint32_t len, uint32_t crcHost) {
 
 void bootloader_get_rdp_cmd(uint8_t *bl_rx_data) {
 	uint8_t rdpLevel = 0;
-
+	uint32_t host_crc = 0;
 	printMessage(" bootloader_get_rdp_cmd ");
 
 	uint32_t command_packet_len = bl_rx_data[0] + 1;
 
-	uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+
+	host_crc |=(bl_rx_data[5]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[4]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[2]&0xFFFFFFFF);
+
 
 	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4,
 			host_crc)) {
