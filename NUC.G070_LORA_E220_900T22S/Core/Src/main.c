@@ -36,7 +36,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LORA_BUFF_LENGTH 150
+#define LORA_BUFF_LENGTH 200
 //double a[100000];
 /* USER CODE END PD */
 
@@ -50,12 +50,18 @@
 /* USER CODE BEGIN PV */
 char Lora_Sending_Buffer[LORA_BUFF_LENGTH]={'\0'};
 char Lora_Adress[4]={'\0'};
+uint8_t Lora_Receive_Buffer[LORA_BUFF_LENGTH]={'\0'};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	HAL_UART_Receive(&huart3, &Lora_Receive_Buffer[1], 138, HAL_MAX_DELAY);
+	  HAL_UART_Receive_IT(&huart3, Lora_Receive_Buffer, 1);
 
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -95,7 +101,7 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_UART_Receive_IT(&huart3, Lora_Receive_Buffer, 1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -115,6 +121,7 @@ int main(void)
 	HAL_UART_Transmit(&huart3, (uint8_t*)Lora_Sending_Buffer, strlen(Lora_Sending_Buffer) ,250);
 	HAL_Delay(500);
 	memset(Lora_Sending_Buffer, '\0', LORA_BUFF_LENGTH);
+	HAL_UART_Receive(&huart3, Lora_Receive_Buffer, 200, 200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

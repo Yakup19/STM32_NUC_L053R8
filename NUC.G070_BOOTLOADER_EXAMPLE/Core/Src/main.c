@@ -205,7 +205,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   SSD1306_Init();
   	SSD1306_GotoXY(0, 0);
-  	HAL_Delay(250);
   	SSD1306_Clear();
   	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_RESET) {
   		printMessage(" Going to bootloader mode.\n");

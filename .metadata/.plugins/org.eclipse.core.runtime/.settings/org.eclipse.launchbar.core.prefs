@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_E220_900T22S Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_E220_900T22S Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_BOOTLOADER_EXAMPLE Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:002_BOOTLOADER_APPLICATION\ Debug/activeLaunchTarget=null\:---
@@ -13,6 +13,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ De
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_EXAMPLE\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_BOOTLOADER_USER_APP/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_CRC32_EXAMPLE\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_E220_900T22S\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.G070_LORA_E220_900T22S\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUC.L053_BOOTLOADER_EXAMPLE\ Debug/activeLaunchMode=debug
