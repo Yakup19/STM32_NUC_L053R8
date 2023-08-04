@@ -7,7 +7,8 @@
 
 #include "bootloader_command_app.h"
 #include "main.h"
-
+#include "ssd1306.h"
+#include "fonts.h"
 extern uint8_t supported_commands[];
 extern UART_HandleTypeDef huart3;
 extern I2C_HandleTypeDef hi2c1;
@@ -232,18 +233,25 @@ void bootloader_mem_write_cmd(uint8_t *bl_rx_data) {
 			writeStatus[0]=0x18;
 			writeStatus[1]=0x66;
 			writeStatus[2]=0x13;
-			bootloader_uart_write_data(writeStatus, 4);
+			//bootloader_uart_write_data(writeStatus, 4);
+			SSD1306_GotoXY(0, 32);
+			SSD1306_Puts("FLASH HAL OK", &Font_7x10, 1);
+			SSD1306_UpdateScreen(); //display
+
 		} else {
 			printMessage(" Invalid Memory Write Address ");
 			writeStatus[3] = ADDR_INVALID;
 			writeStatus[0]= 0x18;
 			writeStatus[1]= 0x66;
 			writeStatus[2]= 0x13;
-			bootloader_uart_write_data(writeStatus, 4);
+			//bootloader_uart_write_data(writeStatus, 4);
+			SSD1306_GotoXY(0, 32);
+			SSD1306_Puts("FLASH HAL ERROR", &Font_7x10, 1);
+			SSD1306_UpdateScreen(); //display
 		}
 	} else {
 		printMessage(" Checksum fail ");
-		bootloader_send_nack();
+		//bootloader_send_nack();
 	}
 }
 
@@ -478,7 +486,7 @@ uint8_t execute_flash_erase(uint8_t sectorNumber, uint8_t numberOfSector) {
 
 uint8_t execute_memory_write(uint8_t *Buffer, uint32_t memAddress, uint32_t len) {
 	uint8_t status = HAL_ERROR;
-	uint64_t data=0;
+	uint64_t data[4]={0};
 
 	HAL_FLASH_Unlock();
 	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ECCD);
@@ -487,31 +495,31 @@ uint8_t execute_memory_write(uint8_t *Buffer, uint32_t memAddress, uint32_t len)
 	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_SYSF_ECC);
 	__HAL_FLASH_CLEAR_FLAG(FLASH_ECCR_ADDR_ECC );
 
-	HAL_FLASH_Lock();
-
 
 	for (uint32_t i = 0; i < len; i= i+8) {
 		//while ((FLASH->SR & FLASH_SR_BSY1)) {}
-		HAL_FLASH_Unlock();
 
-		data=0;
-		data |= ((uint64_t)(Buffer[i+7] &0xFFFFFFFF))<<56;
-		data |= ((uint64_t)(Buffer[i+6] &0xFFFFFFFF))<<48;
-		data |= ((uint64_t)(Buffer[i+5] &0xFFFFFFFF))<<40;
-		data |= ((uint64_t)(Buffer[i+4] &0xFFFFFFFF))<<32;
-		data |= ((uint64_t)(Buffer[i+3] &0xFFFFFFFF))<<24;
-		data |= ((uint64_t)(Buffer[i+2] &0xFFFFFFFF))<<16;
-		data |= ((uint64_t)(Buffer[i+1] &0xFFFFFFFF))<<8;
-		data |= ((uint64_t)(Buffer[i]   &0xFFFFFFFF));
+		FLASH->CR|=0x00040000;
+		FLASH->SR|=0x00000001;
 
+		data[0]=0;
+		data[0] |= ((uint64_t)(Buffer[i+7] &0xFFFFFFFF))<<56;
+		data[0] |= ((uint64_t)(Buffer[i+6] &0xFFFFFFFF))<<48;
+		data[0] |= ((uint64_t)(Buffer[i+5] &0xFFFFFFFF))<<40;
+		data[0] |= ((uint64_t)(Buffer[i+4] &0xFFFFFFFF))<<32;
+		data[1] |= ((uint64_t)(Buffer[i+3] &0xFFFFFFFF))<<24;
+		data[1] |= ((uint64_t)(Buffer[i+2] &0xFFFFFFFF))<<16;
+		data[1] |= ((uint64_t)(Buffer[i+1] &0xFFFFFFFF))<<8;
+		data[1] |= ((uint64_t)(Buffer[i]   &0xFFFFFFFF));
 
-		status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD, memAddress+i, data);
-		HAL_Delay(3);
-		HAL_FLASH_Lock();
+		while(1==(__HAL_FLASH_GET_FLAG(FLASH_SR_BSY1)));
+		status = HAL_FLASH_Program(FLASH_TYPEPROGRAM_FAST, (memAddress+i), data[0]);
+		while(1==(__HAL_FLASH_GET_FLAG(FLASH_SR_BSY1)));
+
 
 
 	}
-
+	HAL_FLASH_Lock();
 	return status;
 }
 
