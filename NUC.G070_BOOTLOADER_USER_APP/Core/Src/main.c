@@ -98,8 +98,7 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   SSD1306_Init();
-  HAL_UARTEx_ReceiveToIdle_DMA(&huart3, bootloader_rx_data, BL_RX_DATA_LENGTH);
-  __HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_HT);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
