@@ -23,6 +23,10 @@
 /* USER CODE BEGIN Includes */
 #include "ssd1306.h"
 #include "fonts.h"
+#include "stdarg.h"
+#include "stdio.h"
+#include "string.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +36,20 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define FLASH_APP_BASE_ADDRESS 	0x08011000
+#define FLASH_END_ADDRESS 		0x0801FFFF
+#define TARGET_LORA_HIGH		0x18
+#define TARGET_LORA_LOW			0x66
+#define TARGET_LORA_CHANNEL   	0x13
+#define BOOTLOADER_FLASH_ADDR  	FLASH_BASE
+#define RX_DATA_LENGTH			20
+#define BL_GO_TO_BOOTLOADER		0x5D
+#define BL_JUMPING_BOOTLOADER  	0x17
+#define BL_USER_ACTIVE			0x15
+#define BL_ACK_VALUE    0xA5
+#define BL_NACK_VALUE	0x7F
+#define CRC_FAIL					1
+#define CRC_SUCCESS					0
 
 /* USER CODE END PD */
 
@@ -41,12 +59,15 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+CRC_HandleTypeDef hcrc;
+
 I2C_HandleTypeDef hi2c1;
 
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_rx;
 
 /* USER CODE BEGIN PV */
+uint8_t Rx_data[RX_DATA_LENGTH];
 
 /* USER CODE END PV */
 
@@ -56,8 +77,22 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART3_UART_Init(void);
+static void MX_CRC_Init(void);
 /* USER CODE BEGIN PFP */
-
+uint8_t bootloader_verify_crc(uint8_t *Buffer, uint32_t len, uint32_t crcHost);
+void bootloader_send_nack();
+void Jump_to_bootloader_application(void);
+void bootloader_go_to_bootloader_cmd();
+void printMessage(char *format, ...);
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+	if(huart->Instance == USART3)
+	{
+		if(Rx_data[1]==BL_GO_TO_BOOTLOADER){
+			bootloader_go_to_bootloader_cmd(Rx_data);
+		}
+	}
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -96,9 +131,11 @@ int main(void)
   MX_DMA_Init();
   MX_I2C1_Init();
   MX_USART3_UART_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
   SSD1306_Init();
-
+  HAL_UARTEx_ReceiveToIdle_DMA(&huart3, Rx_data, RX_DATA_LENGTH);
+  __HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_HT);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,20 +143,20 @@ int main(void)
   while (1)
   {
 	  SSD1306_GotoXY(0, 0);
-	  		SSD1306_Clear();
+	  SSD1306_Clear();
 
-	  		SSD1306_Puts(" USER ", &Font_11x18, 1);
-	  		SSD1306_GotoXY(10, 30);
-	  		SSD1306_Puts("  APP ", &Font_11x18, 1);
-	  		SSD1306_UpdateScreen(); //display
-	  		HAL_Delay(500);
-	  		SSD1306_GotoXY(0, 0);
-	  		SSD1306_Clear();
-	  		SSD1306_Puts("USER APP", &Font_11x18, 1);
-	  		SSD1306_GotoXY(10, 30);
-	  		SSD1306_Puts("  WORKING ", &Font_11x18, 1);
-	  		SSD1306_UpdateScreen(); //display
-			HAL_Delay(500);
+	  SSD1306_Puts(" USER ", &Font_11x18, 1);
+	  SSD1306_GotoXY(10, 30);
+	  SSD1306_Puts("  APP ", &Font_11x18, 1);
+	  SSD1306_UpdateScreen(); //display
+	  HAL_Delay(500);
+	  SSD1306_GotoXY(0, 0);
+	  SSD1306_Clear();
+	  SSD1306_Puts("USER APP", &Font_11x18, 1);
+	  SSD1306_GotoXY(10, 30);
+	  SSD1306_Puts("  WORKING ", &Font_11x18, 1);
+	  SSD1306_UpdateScreen(); //display
+	  HAL_Delay(500);
 
     /* USER CODE END WHILE */
 
@@ -171,6 +208,37 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief CRC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  hcrc.Instance = CRC;
+  hcrc.Init.DefaultPolynomialUse = DEFAULT_POLYNOMIAL_ENABLE;
+  hcrc.Init.DefaultInitValueUse = DEFAULT_INIT_VALUE_ENABLE;
+  hcrc.Init.InputDataInversionMode = CRC_INPUTDATA_INVERSION_NONE;
+  hcrc.Init.OutputDataInversionMode = CRC_OUTPUTDATA_INVERSION_DISABLE;
+  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_WORDS;
+  if (HAL_CRC_Init(&hcrc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
+
 }
 
 /**
@@ -320,6 +388,120 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void printMessage(char *format, ...) {
+	char comingMessage[100] = { 0 };
+	va_list vaList;
+	va_start(vaList, format);
+	vsprintf(comingMessage, format, vaList);
+	SSD1306_GotoXY(0, 0);
+	SSD1306_Puts(comingMessage, &Font_7x10, 1);
+	SSD1306_UpdateScreen(); //display
+	va_end(vaList);
+}
+void bootloader_send_ack(uint8_t followLength) {
+	uint8_t ackBuffer[5];
+	ackBuffer[0] = TARGET_LORA_HIGH;
+	ackBuffer[1] = TARGET_LORA_LOW;
+	ackBuffer[2] = TARGET_LORA_CHANNEL;
+	ackBuffer[3] = BL_ACK_VALUE;
+	ackBuffer[4] = followLength;
+
+	HAL_UART_Transmit(&huart3, ackBuffer, 5, HAL_MAX_DELAY);
+}
+void bootloader_uart_write_data(uint8_t *Buffer, uint32_t len) {
+
+	HAL_UART_Transmit(&huart3, Buffer, len, HAL_MAX_DELAY);
+}
+void bootloader_go_to_bootloader_cmd(uint8_t *bl_rx_data)
+{
+	uint32_t host_crc = 0;
+	uint8_t BL_Lora[5]={0x18,0x66,0x13, BL_USER_ACTIVE, BL_JUMPING_BOOTLOADER};
+
+	uint32_t command_packet_len = bl_rx_data[0] + 1;
+
+	//uint32_t host_crc = *((uint32_t*) ((uint32_t*)bl_rx_data + command_packet_len - 4));
+	host_crc |=(bl_rx_data[command_packet_len-1]&0xFFFFFFFF)<<24;
+	host_crc |=(bl_rx_data[command_packet_len-2]&0xFFFFFFFF)<<16;
+	host_crc |=(bl_rx_data[command_packet_len-3]&0xFFFFFFFF)<<8;
+	host_crc |=(bl_rx_data[command_packet_len-4]&0xFFFFFFFF);
+
+	if (!bootloader_verify_crc(&bl_rx_data[0], command_packet_len - 4, host_crc)) {
+		printMessage("Checksum succes ");
+		bootloader_send_ack(2);
+		printMessage("Going to Bootloader ");
+		bootloader_uart_write_data(BL_Lora, 5);
+		Jump_to_bootloader_application();
+
+
+		}
+	else {
+			printMessage("Checksum fail ");
+			bootloader_send_nack();
+		}
+}
+
+void Jump_to_bootloader_application(void) {
+	//  Kesmeleri kapa
+	/*__disable_irq();// __disable_irq deyince hal_delay çalışmıyor unutma !!!!!*/
+
+	printMessage("Jumping_to_bootloader_application() \n");
+
+	//  MSP'nin değerini tut
+	uint32_t mspValue = *(volatile uint32_t*) BOOTLOADER_FLASH_ADDR;
+	printMessage("MSP Value: %#x \n", mspValue);
+
+	// Sıfırlama işleyicisinin değerini tut
+	uint32_t resetValue = *(volatile uint32_t*) (BOOTLOADER_FLASH_ADDR + 4);
+	printMessage("Reset Value: %#x \n", resetValue);
+
+	//  Periferleri sıfırla ve devre dışı bırak
+
+	SCB->VTOR = BOOTLOADER_FLASH_ADDR;
+	//__set_MSP(mspValue);	// Bu fonksiyon F407 De calisiyordu ama
+	//L053 de çalışmıyor
+	SysTick->CTRL = 0;
+	SysTick->LOAD = 0;
+	SysTick->VAL = 0;
+	HAL_NVIC_SystemReset();
+	HAL_I2C_DeInit(&hi2c1);
+	HAL_UART_MspDeInit(&huart3);
+	HAL_UART_DeInit(&huart3);
+	HAL_DMA_DeInit(&hdma_usart3_rx);
+	HAL_CRC_DeInit(&hcrc);
+	HAL_RCC_DeInit();
+	HAL_DeInit();
+	resetValue = *((volatile uint32_t*) (BOOTLOADER_FLASH_ADDR + 4));
+	void (*jump_to_app)(void) = (void *)resetValue;
+	jump_to_app();
+
+}
+
+
+void bootloader_send_nack() {
+	uint8_t nackValue[4] ;
+	nackValue[0]= TARGET_LORA_HIGH;
+	nackValue[1]= TARGET_LORA_LOW;
+	nackValue[2]= TARGET_LORA_CHANNEL;
+	nackValue[3]= BL_NACK_VALUE;
+	HAL_UART_Transmit(&huart3, nackValue, 4, HAL_MAX_DELAY);
+}
+uint8_t bootloader_verify_crc(uint8_t *Buffer, uint32_t len, uint32_t crcHost) {
+	uint32_t crcValue = 0xFF;
+	uint32_t data = 0;
+
+	for (uint32_t i = 0; i < len; i++) {
+		data = Buffer[i];
+		crcValue = HAL_CRC_Accumulate(&hcrc, &data, 1);
+	}
+
+	__HAL_CRC_DR_RESET(&hcrc);
+
+	if (crcValue == crcHost) {
+		return CRC_SUCCESS;
+	}
+
+	return CRC_FAIL;
+}
 
 /* USER CODE END 4 */
 
