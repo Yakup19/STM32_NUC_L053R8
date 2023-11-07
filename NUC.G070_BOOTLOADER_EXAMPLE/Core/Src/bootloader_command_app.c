@@ -342,7 +342,7 @@ uint8_t bootloader_verify_crc(uint8_t *Buffer, uint32_t len, uint32_t crcHost) {
 		return CRC_SUCCESS;
 	}
 
-	return CRC_SUCCESS;
+	return CRC_FAIL;
 }
 
 void bootloader_get_rdp_cmd(uint8_t *bl_rx_data) {
