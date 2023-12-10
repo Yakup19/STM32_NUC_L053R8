@@ -34,9 +34,25 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\yakup\OneDrive\Belgeler\CANBUS_TRANSMITT.zip"/>
 			<item value="C:\Users\yakup\OneDrive\Masaüstü\lora uart.zip"/>
 			<item value="C:\Users\yakup\OneDrive\Belgeler\user_app.zip"/>
 			<item value="C:\Users\yakup\OneDrive\Belgeler\bootloader.zip"/>
+		</list>
+	</section>
+	<section name="PreferencesExportWizard">
+		<item key="" value="C:\Users\yakup\OneDrive\Masaüstü\cube_ide_ayar_yedek.epf"/>
+		<item key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID" value="false"/>
+		<item key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID" value="false"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\yakup\OneDrive\Masaüstü\cube_ide_ayar_yedek.epf"/>
+		</list>
+		<list key="WizardPreferencesExportPage1.TRANSFER_PREFERENCES_NAMES_ID">
+			<item value="org.eclipse.cdt.ui.transfer.editor.appearance"/>
+			<item value="org.eclipse.cdt.ui.transfer.editor.behavior"/>
+			<item value="org.eclipse.cdt.make.ui.transfer.editor.appearance"/>
+			<item value="org.eclipse.jdt.internal.ui.transfer.codestyle"/>
+			<item value="org.eclipse.jdt.internal.core.transfer.compiler"/>
 		</list>
 	</section>
 </section>
